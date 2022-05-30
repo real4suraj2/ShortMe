@@ -22,7 +22,7 @@ export const Shorten = ({ user, body: { uri }}: IRequest, res: Response) => {
     const idx = indexOf(user.email)
     UserStore[idx].links.push(key)
 
-    res.send(201).send({ 'uri': key })
+    res.status(201).send({ 'uri': key })
 }
 
 export const Info = ({ user }: IRequest, res: Response) => {

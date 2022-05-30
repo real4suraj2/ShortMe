@@ -19,5 +19,5 @@ export default async ({ body: { email, password } }: Request, res: Response) => 
     const { isAdmin } = user
 
     const token = jwt.sign({ email, isAdmin }, JWT_SECRET)
-    return res.send(302).header('xauth', token).send({ message: 'user logged in successfully', token })
+    res.status(302).header('xauth', token).send({ message: 'user logged in successfully', token })
 }
