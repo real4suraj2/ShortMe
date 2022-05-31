@@ -2,9 +2,7 @@ import { Router } from 'express'
 
 import Register from './register'
 import Login from './login'
-
 import Public from './public'
-
 import { Shorten, Info, Admin } from './private'
 
 import AuthMiddleware from '../middlewares/auth'
